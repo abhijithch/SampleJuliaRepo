@@ -9,6 +9,6 @@ before_install:
     - sudo apt-get update -qq -y
     - sudo apt-get install libpcre3-dev julia -y
 script:
-    - julia -e 'Pkg.init(); run(`ln -s $(pwd()) $(Pkg.dir())/SampleJuliaRepo`); Pkg.resolve()'
-    - julia -e 'using SampleJuliaRepo; @assert isdefined(:SampleJuliaRepo); @assert typeof(SampleJuliaRepo) === Module'
+    - julia -e 'Pkg.init(); run(`ln -s $(pwd()) $(Pkg.dir())/PalindromeDetection`); Pkg.resolve()'
+    - julia -e 'using PalindromeDetection; @assert isdefined(:PalindromeDetection); @assert typeof(PalindromeDetection) === Module'
     - julia test/runtests.jl TEST

@@ -1,3 +1,4 @@
+module PalindromeDetection
 # Code submitted to http://rosettacode.org/wiki/Palindrome_detection#Julia
 
 # Recursive
@@ -10,4 +11,6 @@ function palindrome(s)
         return palindrome(SubString(s,2,len-1))
     end
     return false
+end
+
 end
